@@ -162,6 +162,15 @@
             margin-top: 20px;
         }
 
+        .hero-quote {
+            font-size: 1.5rem;
+            font-weight: 300;
+            margin-top: 30px;
+            opacity: 0.9;
+            font-style: italic;
+            letter-spacing: 2px;
+        }
+
         /* 通用区块 */
         section {
             padding: 100px 10%;
@@ -292,6 +301,35 @@
             padding: 6px 16px;
             border-radius: 20px;
             font-size: 0.85rem;
+        }
+
+        .season-section {
+            margin-bottom: 60px;
+        }
+
+        .season-header {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 30px;
+            padding-bottom: 15px;
+            border-bottom: 2px solid var(--light-green);
+        }
+
+        .season-icon {
+            font-size: 2.5rem;
+        }
+
+        .season-title {
+            font-size: 1.8rem;
+            color: var(--primary-green);
+            font-weight: 600;
+        }
+
+        .season-desc {
+            color: var(--text-muted);
+            margin-left: auto;
+            font-size: 0.95rem;
         }
 
         /* 美食推荐 */
@@ -486,6 +524,80 @@
             background: var(--primary-green);
         }
 
+        /* 用户评价 */
+        .testimonials {
+            background: linear-gradient(135deg, var(--light-green) 0%, var(--bg-creamy) 100%);
+        }
+
+        .testimonial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .testimonial-card {
+            background: white;
+            padding: 40px;
+            border-radius: var(--border-radius);
+            box-shadow: var(--shadow-sm);
+            position: relative;
+        }
+
+        .testimonial-card::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--accent-orange);
+            opacity: 0.3;
+            position: absolute;
+            top: 10px;
+            left: 20px;
+            font-family: Georgia, serif;
+        }
+
+        .testimonial-text {
+            font-size: 1.05rem;
+            line-height: 1.9;
+            color: var(--text-main);
+            margin-bottom: 25px;
+            font-style: italic;
+        }
+
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--primary-green);
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+
+        .author-info h4 {
+            color: var(--primary-green);
+            font-size: 1.1rem;
+            margin-bottom: 5px;
+        }
+
+        .author-info span {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .rating {
+            color: #FFD700;
+            font-size: 1.1rem;
+            margin-bottom: 15px;
+        }
+
         /* 页脚 */
         footer {
             background: var(--text-main);
@@ -526,6 +638,7 @@
             <li><a href="#products">四季物产</a></li>
             <li><a href="#food">美食推荐</a></li>
             <li><a href="#tourism">乡村旅游</a></li>
+            <li><a href="#testimonials">游客评价</a></li>
             <li><a href="#contact">联系我们</a></li>
         </ul>
     </nav>
@@ -542,6 +655,7 @@
         <div class="hero-content">
             <h1>桂林村</h1>
             <p class="subtitle">三峡库区的生态明珠</p>
+            <p class="hero-quote">"山清水秀人安乐，物产丰饶四季香"</p>
             <span class="tagline">重庆市云阳县高阳镇建全乡 · 山水田园美丽乡村</span>
         </div>
         <div class="hero-dots">
@@ -578,58 +692,102 @@
         <h2 class="section-title">四季物产</h2>
         <p class="section-desc">春夏秋冬，丰收不断，大自然的馈赠</p>
         
-        <div class="product-grid">
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1582979512210-99b6a53386f9?w=400'), url('https://images.unsplash.com/photo-1619566636858-adf3ef46400b?w=400');"></div>
-                <div class="product-info">
-                    <h3>桂林橙子</h3>
-                    <p>皮薄肉厚，汁多味甜，富含维生素C</p>
-                    <span class="product-tag">冬季上市</span>
+        <!-- 春季 -->
+        <div class="season-section">
+            <div class="season-header">
+                <span class="season-icon">🌸</span>
+                <h3 class="season-title">春季</h3>
+                <span class="season-desc">枇杷成熟 · 野菜采摘</span>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400');"></div>
+                    <div class="product-info">
+                        <h3>桂林枇杷</h3>
+                        <p>果肉细腻，甜润多汁，润肺止咳</p>
+                        <span class="product-tag">春季上市</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1546069901-ba9599a7e63c?w=400');"></div>
+                    <div class="product-info">
+                        <h3>香椿嫩芽</h3>
+                        <p>春季限定山珍，香气独特，营养丰富</p>
+                        <span class="product-tag">春季采摘</span>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400'), url('https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400');"></div>
-                <div class="product-info">
-                    <h3>桂林橘子</h3>
-                    <p>果肉细嫩，酸甜适中，香气浓郁</p>
-                    <span class="product-tag">冬季上市</span>
+        <!-- 夏季 -->
+        <div class="season-section">
+            <div class="season-header">
+                <span class="season-icon">☀️</span>
+                <h3 class="season-title">夏季</h3>
+                <span class="season-desc">李子成熟 · 消暑佳品</span>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1603052875302-d376b7c0638a?w=400');"></div>
+                    <div class="product-info">
+                        <h3>桂林李子</h3>
+                        <p>果肉脆嫩，酸甜可口，消暑佳品</p>
+                        <span class="product-tag">夏季上市</span>
+                    </div>
+                </div>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1534043464124-3866a2a99f1e?w=400');"></div>
+                    <div class="product-info">
+                        <h3>桂林草鱼</h3>
+                        <p>水质清澈，鱼肉鲜美，四季供应</p>
+                        <span class="product-tag">四季供应</span>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1576076567699-247103a75b10?w=400'), url('https://images.unsplash.com/photo-1597715508708-60324d7fb966?w=400');"></div>
-                <div class="product-info">
-                    <h3>野生蘑菇</h3>
-                    <p>纯天然生长，营养丰富，山珍美味</p>
-                    <span class="product-tag">夏秋采摘</span>
+        <!-- 秋季 -->
+        <div class="season-section">
+            <div class="season-header">
+                <span class="season-icon">🍂</span>
+                <h3 class="season-title">秋季</h3>
+                <span class="season-desc">蘑菇采摘 · 丰收季节</span>
+            </div>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1576076567699-247103a75b10?w=400');"></div>
+                    <div class="product-info">
+                        <h3>野生蘑菇</h3>
+                        <p>纯天然生长，营养丰富，山珍美味</p>
+                        <span class="product-tag">秋季采摘</span>
+                    </div>
                 </div>
             </div>
+        </div>
 
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1603052875302-d376b7c0638a?w=400'), url('https://images.unsplash.com/photo-1594002348772-bc0cb57ade8b?w=400');"></div>
-                <div class="product-info">
-                    <h3>桂林李子</h3>
-                    <p>果肉脆嫩，酸甜可口，消暑佳品</p>
-                    <span class="product-tag">夏季上市</span>
-                </div>
+        <!-- 冬季 -->
+        <div class="season-section">
+            <div class="season-header">
+                <span class="season-icon">❄️</span>
+                <h3 class="season-title">冬季</h3>
+                <span class="season-desc">柑橘丰收 · 年货首选</span>
             </div>
-
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400'), url('https://images.unsplash.com/photo-1610832958506-aa56368176cf?w=400');"></div>
-                <div class="product-info">
-                    <h3>桂林枇杷</h3>
-                    <p>果肉细腻，甜润多汁，润肺止咳</p>
-                    <span class="product-tag">春季上市</span>
+            <div class="product-grid">
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1582979512210-99b6a53386f9?w=400');"></div>
+                    <div class="product-info">
+                        <h3>桂林橙子</h3>
+                        <p>皮薄肉厚，汁多味甜，富含维生素C</p>
+                        <span class="product-tag">冬季上市</span>
+                    </div>
                 </div>
-            </div>
-
-            <div class="product-card">
-                <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1534043464124-3866a2a99f1e?w=400'), url('https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=400');"></div>
-                <div class="product-info">
-                    <h3>桂林草鱼</h3>
-                    <p>水质清澈，鱼肉鲜美，招牌美食</p>
-                    <span class="product-tag">四季供应</span>
+                <div class="product-card">
+                    <div class="product-image" style="background-image: url('https://images.unsplash.com/photo-1601493700631-2b16ec4b4716?w=400');"></div>
+                    <div class="product-info">
+                        <h3>桂林橘子</h3>
+                        <p>果肉细嫩，酸甜适中，香气浓郁</p>
+                        <span class="product-tag">冬季上市</span>
+                    </div>
                 </div>
             </div>
         </div>
@@ -731,6 +889,50 @@
                 <div class="activity-icon">🌾</div>
                 <h3>农事体验</h3>
                 <p>参与农事活动，了解农耕文化</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- 游客评价 -->
+    <section class="testimonials" id="testimonials">
+        <h2 class="section-title">游客评价</h2>
+        <p class="section-desc">听听来过桂林村的朋友怎么说</p>
+        
+        <div class="testimonial-grid">
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">"这里的橙子真的太甜了！带孩子来采摘，他们玩得很开心。村民特别热情，还教我们怎么挑最好的果子。"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">李</div>
+                    <div class="author-info">
+                        <h4>李先生</h4>
+                        <span>重庆 · 2025年12月采摘体验</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">"春天的枇杷节太棒了！满山遍野的枇杷树，金黄的果子挂满枝头。农家乐的土鸡清汤鲜美无比，下次还要带朋友来。"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">王</div>
+                    <div class="author-info">
+                        <h4>王女士</h4>
+                        <span>成都 · 2025年4月枇杷采摘</span>
+                    </div>
+                </div>
+            </div>
+
+            <div class="testimonial-card">
+                <div class="rating">★★★★★</div>
+                <p class="testimonial-text">"储水电站的景色太壮观了！站在观景台上，看着碧绿的湖水和远处的青山，感觉整个人都被治愈了。"</p>
+                <div class="testimonial-author">
+                    <div class="author-avatar">张</div>
+                    <div class="author-info">
+                        <h4>张先生</h4>
+                        <span>武汉 · 2025年10月摄影之旅</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
