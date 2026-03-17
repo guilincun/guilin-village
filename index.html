@@ -160,7 +160,7 @@
         }
 
         .about-image {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            background: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4?w=800') center/cover;
             height: 400px;
             border-radius: 20px;
             display: flex;
@@ -173,9 +173,13 @@
         }
 
         .about-image::before {
-            content: '🏞️ 山水风光';
-            font-size: 3rem;
-            opacity: 0.5;
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: rgba(0,0,0,0.3);
         }
 
         /* 四季物产 */
@@ -554,7 +558,7 @@
 
         <div class="product-grid">
             <div class="product-card">
-                <div class="product-image">🍊</div>
+                <div class="product-image" style="background: url('https://images.unsplash.com/photo-1611080626919-7cf5a9dbab5b?w=400') center/cover;"></div>
                 <div class="product-info">
                     <h3>桂林橙子</h3>
                     <p>皮薄肉厚，汁多味甜，富含维生素C。冬季主打产品，口感绝佳，深受消费者喜爱。</p>
@@ -563,7 +567,7 @@
             </div>
 
             <div class="product-card">
-                <div class="product-image">🍊</div>
+                <div class="product-image" style="background: url('https://images.unsplash.com/photo-1557800636-894a64c1696f?w=400') center/cover;"></div>
                 <div class="product-info">
                     <h3>桂林橘子</h3>
                     <p>果肉细嫩，酸甜适中，香气浓郁。采用生态种植，不打农药，绿色健康。</p>
@@ -572,7 +576,7 @@
             </div>
 
             <div class="product-card">
-                <div class="product-image">🍄</div>
+                <div class="product-image" style="background: url('https://images.unsplash.com/photo-1576076567699-247103a75b10?w=400') center/cover;"></div>
                 <div class="product-info">
                     <h3>野生蘑菇</h3>
                     <p>夏秋季节，山上野生蘑菇遍地。纯天然生长，营养丰富，是难得的山珍美味。</p>
@@ -581,7 +585,7 @@
             </div>
 
             <div class="product-card">
-                <div class="product-image">🍑</div>
+                <div class="product-image" style="background: url('https://images.unsplash.com/photo-1596404643764-2a2461483b29?w=400') center/cover;"></div>
                 <div class="product-info">
                     <h3>桂林李子</h3>
                     <p>果肉脆嫩，酸甜可口。夏季成熟，是消暑解渴的佳品。</p>
@@ -590,7 +594,7 @@
             </div>
 
             <div class="product-card">
-                <div class="product-image">🍈</div>
+                <div class="product-image" style="background: url('https://images.unsplash.com/photo-1615485290382-441e4d049cb5?w=400') center/cover;"></div>
                 <div class="product-info">
                     <h3>桂林枇杷</h3>
                     <p>果肉细腻，甜润多汁。具有润肺止咳的功效，是春季的珍贵水果。</p>
@@ -599,7 +603,7 @@
             </div>
 
             <div class="product-card">
-                <div class="product-image">🐟</div>
+                <div class="product-image" style="background: url('https://images.unsplash.com/photo-1534043464124-3866a2a99f1e?w=400') center/cover;"></div>
                 <div class="product-info">
                     <h3>桂林草鱼</h3>
                     <p>鱼塘养殖，水质清澈，鱼肉鲜美。清蒸、红烧皆宜，是当地招牌美食。</p>
@@ -616,7 +620,7 @@
         
         <div class="food-grid">
             <div class="food-card">
-                <div class="food-image">🐟</div>
+                <div class="food-image" style="background: url('https://images.unsplash.com/photo-1534043464124-3866a2a99f1e?w=400') center/cover;"></div>
                 <div class="food-info">
                     <h3>清蒸草鱼</h3>
                     <p>选用桂林村鱼塘新鲜草鱼，肉质细嫩，清蒸后淋上葱油，原汁原味，鲜美无比。</p>
@@ -624,7 +628,7 @@
             </div>
 
             <div class="food-card">
-                <div class="food-image">🥬</div>
+                <div class="food-image" style="background: url('https://images.unsplash.com/photo-1525351484163-7529414395d8?w=400') center/cover;"></div>
                 <div class="food-info">
                     <h3>香椿炒蛋</h3>
                     <p>春季限定美食。新鲜香椿嫩芽搭配土鸡蛋，香气扑鼻，是春天最鲜美的味道。</p>
@@ -632,7 +636,7 @@
             </div>
 
             <div class="food-card">
-                <div class="food-image">🌿</div>
+                <div class="food-image" style="background: url('https://images.unsplash.com/photo-1540420773420-3366772f4999?w=400') center/cover;"></div>
                 <div class="food-info">
                     <h3>凉拌折耳根</h3>
                     <p>云贵川特色野菜。春季采摘，凉拌后酸辣爽口，开胃解腻，别具风味。</p>
@@ -640,7 +644,7 @@
             </div>
 
             <div class="food-card">
-                <div class="food-image">🧅</div>
+                <div class="food-image" style="background: url('https://images.unsplash.com/photo-1604579278540-bdb2a9b5a4b5?w=400') center/cover;"></div>
                 <div class="food-info">
                     <h3>野葱炒腊肉</h3>
                     <p>山野野葱搭配农家腊肉，葱香浓郁，腊味醇厚，是下饭神器。</p>
